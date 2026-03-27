@@ -6,14 +6,19 @@ import CocoRoxieBracket from '../BracketPdfs/CocoRoxieBracket.pdf';
 
 
 const data = [
-    { name: "Dad", score: 19, bracket: DadsBracket },
-    { name: "Mom", score: 19, bracket: MomsBracket },
-    { name: "Sam", score: 25, bracket: '' },
-    { name: "Coco + Roxie", score: 25, bracket: CocoRoxieBracket },
-    { name: "Ben", score: 25, bracket: BensBracket },
+    { name: "Dad", score: 38, bracket: DadsBracket },
+    { name: "Mom", score: 30, bracket: MomsBracket },
+    { name: "Sam", score: 'TBD', bracket: 'TBD' },
+    { name: "Coco + Roxie", score: 28, bracket: CocoRoxieBracket },
+    { name: "Ben", score: 38, bracket: BensBracket },
 ]
 
 function TableComponent() {
+    const sortedData = [...data].sort((a, b) => {
+        const scoreA = typeof a.score === 'number' ? a.score : -1;
+        const scoreB = typeof b.score === 'number' ? b.score : -1;
+        return scoreB - scoreA; 
+    });
     return (
         <div className="Table">
             <table>
@@ -22,7 +27,7 @@ function TableComponent() {
                     <th>Score</th>
                     <th>View Bracket</th>
                 </tr>
-                {data.map((val, key) => {
+                {sortedData.map((val, key) => {
                     return (
                         <tr key={key}>
                             <td>{val.name}</td>
