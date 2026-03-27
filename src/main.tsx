@@ -1,10 +1,11 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
+import TableComponent from './Components/TableComponent.tsx'
+import './Stylings/App.css'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
+    <h1 className = "title">Hobbs March Madness Brackets</h1>
+    <TableComponent/>
   </StrictMode>,
 )

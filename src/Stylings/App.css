@@ -5,6 +5,12 @@
   text-align: center;
 }
 
+.title {
+  justify-content: center;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
