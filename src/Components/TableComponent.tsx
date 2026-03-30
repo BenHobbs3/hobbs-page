@@ -10,7 +10,7 @@ const data = [
     { name: "Mom", score: 30, bracket: MomsBracket },
     { name: "Sam", score: 'TBD', bracket: 'TBD' },
     { name: "Coco + Roxie", score: 28, bracket: CocoRoxieBracket },
-    { name: "Ben", score: 38, bracket: BensBracket },
+    { name: "Benjamin", score: 38, bracket: BensBracket },
 ]
 
 function TableComponent() {
